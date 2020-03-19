@@ -1,0 +1,27 @@
+GET http://localhost:9999/posts/99
+
+###
+
+GET http://localhost:9999/posts/hot
+
+###
+
+GET http://localhost:9999/posts/99/comments/11
+
+###
+
+GET http://localhost:9999/posts/99/comments/
+
+###
+
+POST https://io-fileservice.herokuapp.com/uploading
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="img.zip"
+Content-Type: application/zip
+
+< ./mux.zip
+--WebAppBoundary--
+
+###
